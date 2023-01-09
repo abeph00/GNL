@@ -6,7 +6,7 @@
 /*   By: abertran <abertran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 15:18:42 by abertran          #+#    #+#             */
-/*   Updated: 2022/12/13 15:47:46 by abertran         ###   ########.fr       */
+/*   Updated: 2023/01/05 16:27:50 by abertran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,21 +51,25 @@ char	*get_next_line(int fd)
 	str = ft_nextstr(str);
 	return (ln);
 }
-
-/*int	main(void)
+/*
+int	main(void)
 {
-	int fd;
-    char *tab;
-    fd = open("test.txt", O_RDONLY);
-    tab = get_next_line(fd);
-    printf("%s", tab);
-    free(tab);
-    tab = get_next_line(fd);
-    printf("%s", tab);
-    tab = get_next_line(fd);
-    printf("%s", tab);
-    tab = get_next_line(fd);
-    printf("%s", tab);
-    close(fd);
+	int		fd;
+	char	*tab;
+
+	fd = open("test.txt", O_RDONLY);
+	//fd = 0;
+	tab = get_next_line(fd);
+	printf("%s", tab);
+	free(tab);
+	tab = get_next_line(fd);
+	printf("%s", tab);
+	tab = get_next_line(fd);
+	printf("%s", tab);
+	tab = get_next_line(fd);
+	printf("%s", tab);
+	close(fd);
+	system ("leaks a.out");
 	return (0);
-}*/
+}
+*/
