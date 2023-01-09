@@ -8,9 +8,13 @@
 
 ---
 
-## 🗣️
+## 🗣️EN QUE CONSISTE
 
-> _En este proyecto desarrollaremos una funcion que permita leer una linea, que terminara en \n, de un file descriptor sin saber su 
-tamaño. Cuando llames de nuevo a la funcion en el mismo archivo esta cogerá la siguiente linea.
-Cuando la funcion retorne -1 habrá ocurrido un error, si devuelve 0 el archivo habrá terminado y si es 1 habrá leido una linea.
-Comprenderemos atraves de este proyecto como los archivos son abiertos, leidos y cerrados en OS. 
+> _El objetivo es crear una función que lea una linea hasta \n o EOF. Leerá  linea a linea hasta el final, con repetidas llamadas a la función get next line. Devolvera la linea que se acaba de leer(carácter n incluido). Si no hay nada mas que leer o si ocurre un error deberá devolver NULL. Deberá comportarse adecuadamente leyendo tanto de un archivo como de stdin.
+
+## ❗COSAS QUE NECESITAS SABER PARA ESTE PROYECTO
+
+> _Variables estaticas.
+> _Buffer
+> _File descriptors
+> _Como funciona read.
