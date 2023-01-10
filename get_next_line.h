@@ -6,12 +6,16 @@
 /*   By: abertran <abertran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 15:20:40 by abertran          #+#    #+#             */
-/*   Updated: 2022/12/02 14:08:08 by abertran         ###   ########.fr       */
+/*   Updated: 2023/01/09 18:37:51 by abertran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 10000000
+# endif
 
 # include <stdio.h>
 # include <unistd.h>
