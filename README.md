@@ -37,3 +37,15 @@ Con esta función controlaremos que read funcione hasta que encuentre un salto d
 > _FT_STRJOIN
 Aqui haremos del buffer a la estatica. Guardaremos los caracteres leidos en una variable estatica.
 
+## EL PROGRAMA
+"get_next_line" es una función en el lenguaje C que se utiliza para leer una línea completa desde un archivo. La función utiliza un buffer de tamaño fijo para leer una cantidad de caracteres del archivo y luego procesa el contenido del buffer para buscar el final de línea ('\n').
+
+La función recibe como argumento el descriptor de archivo (fd) correspondiente al archivo que se quiere leer. En la primera llamada a la función, se inicializa una variable estática llamada "str" con un valor nulo. En las siguientes llamadas a la función, esta variable "str" mantiene el contenido del archivo que aún no ha sido procesado.
+
+La función "ft_read" se encarga de leer una cantidad de caracteres del archivo y almacenarlos en un buffer. Si el buffer se llena antes de encontrar un final de línea, la función continúa leyendo desde donde quedó la última lectura. La función devuelve un puntero a una cadena de caracteres que contiene el contenido del archivo leído hasta el final de línea o hasta el final del archivo.
+
+La función "ft_line" recibe una cadena de caracteres y devuelve una nueva cadena que contiene todos los caracteres desde el inicio de la cadena original hasta el primer carácter '\n' encontrado. La función "ft_nextstr" recibe una cadena de caracteres y devuelve una nueva cadena que contiene todos los caracteres después del primer carácter '\n' encontrado en la cadena original.
+
+En la función "get_next_line", se llama a "ft_read" para obtener una cadena de caracteres que contenga una línea completa desde el archivo. Luego, se llama a "ft_line" para obtener una nueva cadena que contenga la línea completa. La variable estática "str" se actualiza para que contenga el resto del archivo que aún no ha sido procesado.
+
+La función devuelve un puntero a la nueva cadena que contiene la línea completa. Si la función llega al final del archivo, devuelve un valor nulo. En cada llamada sucesiva a la función, se procesa el contenido restante del archivo almacenado en la variable "str" hasta encontrar una nueva línea completa.
